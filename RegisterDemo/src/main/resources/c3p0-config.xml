@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<named-config name="mysql">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/test1?useSSL=false</property>
+		<property name="user">root</property>
+		<property name="password">123456</property>
+		<!-- 初始化时一个连接池尝试获得的连接数量，默认是3，大小应该在maxPoolSize和minPoolSize之间 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 一个连接最大空闲时间(单位是秒)，0意味着连接不会过时 -->
+		<property name="maxIdleTime">30</property>
+		<!-- 任何指定时间的最大连接数量 ,默认值是15 -->
+		<property name="maxPoolSize">20</property>
+		<!-- 任何指定时间的最小连接数量 ,默认值是3 -->
+		<property name="minPoolSize">5</property>
+	</named-config>
+</c3p0-config>  
