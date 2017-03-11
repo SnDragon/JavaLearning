@@ -1,0 +1,53 @@
+maven常用命令：
+mvn -v 查看maven版本
+	compile 编译
+	test	测试
+	package	打包
+	
+	clean	删除target
+	install	安装jar包到本地仓库中
+	
+	archetype插件：用于创建符合Maven规定的目录骨架
+	
+mvn archetype:generate -DgroupId=组织名，公司网址的反写+项目名
+						-DartifactId=项目名-模块名 
+						-Dversion=版本号
+						-Dpackage=项目所在包名
+						-DarchetypeCatalog=internal
+
+mvn archetype:generate -DarchetypeCatalog=internal按照提示进行选择
+
+坐标
+	构件
+仓库
+	本地仓库和远程仓库
+镜像仓库
+
+完整项目构建过程包括：
+清理、编译、测试、打包、集成测试、验证、部署
+
+Maven生命周期：
+1.clean	清理项目
+	pre-clean 执行清理前的工作
+	clean	  清理上一次构建的所有工作
+	post-clean	执行清理后的工作
+2.default	构建项目(最核心)
+	compile test package install
+3.site		生成项目站点
+	pre-site	在生成项目站点前要完成的工作
+	site		生成项目站点文档
+	post-site	在生成项目站点后要完成的工作
+	site-deploy 发布生成的站点到服务器上
+
+clean compile test package install 
+
+
+SNAPSHOT快照
+alpha	内部测试
+beta	公测
+Release	稳定
+GA		正式上线
+
+依赖冲突：
+1.短路优先
+2.路径长度相同时，谁先声明谁优先
