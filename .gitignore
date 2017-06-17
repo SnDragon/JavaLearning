@@ -8,3 +8,8 @@
 *.jar
 *.war
 *.zip
+
+.settings
+**/target
+.classpath
+.project

@@ -1,0 +1,28 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="scut.legend.cg.dao.UserDao">
+	
+	<select id="getUserById" resultType="scut.legend.cg.po.User">
+		select * from `user` where id=#{0}
+	</select>
+	
+	<select id="findByUsername" resultType="scut.legend.cg.po.User">
+		select * from user where username=#{0}
+	</select>
+	
+	<select id="findRoles" resultType="java.lang.String">
+		select role_name 
+		from user left join user_role on user.id=user_role.user_id
+		left join role on user_role.role_id = role.id
+		where username=#{0}
+	</select>
+	
+	<select id="findPermissions" resultType="java.lang.String">
+		select permission_name
+		from user left join user_role on user.id=user_role.user_id
+		left join role_permission on user_role.role_id=role_permission.role_id
+		left join permission on role_permission.permission_id=permission.id
+		where username=#{0}
+	</select>
+</mapper>
