@@ -10,3 +10,5 @@ Spring+SpringMVC+Mybatis整合实例（基于Maven）
 SSM+Redis+MySQL构建的秒杀系统
 ## note
 一些学习笔记
+## cg
+SSM+Shiro整合(基于Maven)
