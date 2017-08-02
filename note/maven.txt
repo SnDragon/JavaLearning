@@ -14,6 +14,7 @@ mvn archetype:generate -DgroupId=组织名，公司网址的反写+项目名
 						-Dversion=版本号
 						-Dpackage=项目所在包名
 						-DarchetypeCatalog=internal
+						-DarchetypeArtifactId=[maven-archetype-webapp]项目类型
 
 mvn archetype:generate -DarchetypeCatalog=internal按照提示进行选择
 
